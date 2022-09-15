@@ -1,0 +1,49 @@
+.logo{
+    font-size: 5em;color: rgba(255, 251, 1, 0.863);background-color: rgb(38, 2, 243);
+    
+    
+
+}
+.main-class{
+background-color: rgb(91, 82, 172);
+
+}
+.details-container{
+
+
+}
+.details-image{
+
+width: 800px;
+
+
+}
+.details-title{
+
+display: block;font-size: 3em;color: rgb(184, 243, 20);
+
+
+}
+.thumbnails-list{
+
+    list-style: none;
+    
+}
+.thumbnails-item{
+   
+
+}
+.thumbnails-image{
+
+    width: 500px;
+    
+}
+.thumbnails.title{
+
+
+}
+.thumbnails-anchor{
+
+    display: block;
+    
+}
