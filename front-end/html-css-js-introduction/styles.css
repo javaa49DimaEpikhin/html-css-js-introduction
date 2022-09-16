@@ -15,6 +15,7 @@ background-color: rgb(91, 82, 172);
 .details-image{
 
 width: 800px;
+height: 450px;
 
 
 }
@@ -36,14 +37,15 @@ display: block;font-size: 3em;color: rgb(184, 243, 20);
 .thumbnails-image{
 
     width: 500px;
+    height: 300px;
     
 }
 .thumbnails.title{
 
-
+    display: block;
 }
 .thumbnails-anchor{
 
-    display: block;
+    
     
 }
