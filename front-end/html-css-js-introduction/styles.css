@@ -3,6 +3,8 @@ body {
     flex-direction: column;
     background-color: rgba(7, 130, 230, 0.801);
 
+    
+
 
 }
 
@@ -11,7 +13,8 @@ body {
     background-color: rgb(216, 151, 12);
     text-align: center;
     display: block;
-    margin-bottom: 25px;
+    
+    
 
 
 
@@ -24,6 +27,8 @@ body {
     flex-direction: column;
     align-items: center;
     margin-top: 2.5vh;
+
+    
     
 
 
@@ -34,14 +39,15 @@ body {
     width: 70vw;
     height: 60vw;
     border-radius: 25%;
-    margin-left: 50px;
+
 
 
 }
 
 .details-title {
     display: block;
-    margin-left: 25vw;
+    
+    
 
 
 }
@@ -82,6 +88,7 @@ body {
     height: 15vw;
     display: block;
     
+    
 
 
 
@@ -95,7 +102,7 @@ body {
     text-align: center;
     height: 5vw;
     background-color: aquamarine;
- 
+    
     
 
 
@@ -107,6 +114,7 @@ body {
 .thumbnails-anchor {
 
     text-decoration: none;
+    
 
 
 }
