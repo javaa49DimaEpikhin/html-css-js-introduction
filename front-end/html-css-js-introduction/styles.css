@@ -2,34 +2,45 @@
     font-family: lakeshore;
     src: url("fonts/LAKESHOR-webfont.svg");
     src: url("fonts/LAKESHOR-webfont.woff");
+
+
+}
+
+@font-face {
+    font-family: airstream;
+    src: url("fonts/Airstream-webfont.svg");
+    src: url("fonts/Airstream-webfont.woff");
+
+
 }
 
 :root {
-    --thumbnails-img-width: 25vw;
+    --thumbnails-img-width: 20vw;
     --thumbnails-img-height: 15vw;
-    --thumbnails-title-height: calc(var(--thumbnails-img-height) * 0.33)
+    --thumbnails-title-height: calc(var(--thumbnails-img-height)* 0.33)
 }
 
-body,html {
+body,
+html {
     height: 100%;
 }
 
 body {
     display: flex;
     flex-direction: column;
-    background-color: rgb(3, 101, 248);
+    background-color: rgb(3, 96, 236);
     margin: 0;
 
 }
 
 .logo {
     font-size: 2em;
-    background-color: rgb(226, 127, 6);
+    background-color: rgb(223, 124, 2);
     display: block;
     text-align: center;
     font-family: lakeshore;
     text-transform: uppercase;
-
+    letter-spacing: 5px;
 
 }
 
@@ -38,8 +49,6 @@ body {
     flex-direction: column;
     justify-content: center;
     flex-grow: 1;
-    padding-top: 3vh;
-    align-items: center;
 }
 
 .details-container {
@@ -50,18 +59,29 @@ body {
 
 
 
-
 }
 
 .details-image {
-    width: 80vw;
+    width: 90vw;
     height: 70vw;
     border-radius: 25%;
+
 }
 
 .details-title {
     display: block;
-    font-size: 1em;
+    font-family: airstream;
+    font-style: italic;
+    background-color: rgb(17, 216, 17);
+    position: absolute;
+    bottom: 2vw;
+    left: 0;
+
+
+
+
+
+
 
 
 
@@ -76,7 +96,8 @@ body {
     overflow-y: auto;
     justify-content: space-around;
     padding-left: 0;
-    padding-right: 2vw;
+    padding-right: 3vw;
+    padding-left: 3vw;
 
 }
 
@@ -84,105 +105,110 @@ body {
     max-width: var(--thumbnails-img-width);
     min-height: calc(var(--thumbnails-img-height) + var(--thumbnails-title-height));
     margin-top: 2.5vh;
-    border: solid 1px rgb(12, 11, 11);
+    border: solid 1px black;
     border-radius: 25%;
     overflow: hidden;
-    
-
 }
 
 .thumbnails-image {
     width: var(--thumbnails-img-width);
     height: var(--thumbnails-img-height);
     display: block;
-
 }
 
 .thumbnails-title {
     display: block;
     text-align: center;
     height: var(--thumbnails-title-height);
-    background-color: rgb(233, 236, 9);
-    font-size: 15px;
-    overflow-y: auto;
+    background-color: rgb(240, 240, 7);
 }
 
 .thumbnails-anchor {
     text-decoration: none;
 }
 
-@media (min-width: 560px) {
+.thumbnails-item:hover {
+    transform: scale(1.1);
+    margin-left: 1vw;
+
+}
+
+.details-frame {
+
+    position: relative;
+
+}
+
+@media(min-width: 560px) {
     :root {
-        --thumbnails-img-width: 13vw;
+        --thumbnails-img-width: 12vw;
         --thumbnails-img-height: 8vw;
+        --thumbnails-title-height: calc(var(--thumbnails-img-height)* 0.25)
     }
 
-    body {
-
-        overflow: hidden;
+    .logo {
+        font-size: 1.8em;
     }
 
     .thumbnails-list {
         flex-direction: column;
         flex-wrap: nowrap;
-        max-height: 80vh;
+        max-height: 75vh;
         order: -1;
         justify-content: flex-start;
-
-
     }
 
     .main-class {
         flex-direction: row;
         justify-content: space-around;
-        display: flex;
+
     }
 
     .details-image {
-        width: 40vw;
-        height: 30vw;
+        width: 45vw;
+        height: 38vw;
     }
 
-    .thumbnails-title {
-        display: block;
-        text-align: center;
-        height: var(--thumbnails-title-height);
-        background-color: rgb(234, 238, 5);
-        font-size: 30px;
-    }
-
-    .thumbnails-image {
-        width: var(--thumbnails-img-width);
-        height: var(--thumbnails-img-height);
-        display: block;
-
-
-    }
-
-}
-
-@media (min-width: 900px) {
     .details-container {
         justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+
     }
 
+    .details-title {
+        left: 0;
+        bottom: 2vw;
+
+    }
+}
+
+@media(min-width: 900px) {
     .thumbnails-list {
-        width: 15vw;
-
-    }
-
-    .thumbnails-item {
-
-        border: solid black 1px;
+        padding-right: 2vw;
+        margin-top: 2.5vh;
+        max-height: 86vh;
     }
 
     .thumbnails-title {
         font-size: 1.5em;
-
     }
-    .thumbnails-image {
-        width: var(--thumbnails-img-width);
-        height: var(--thumbnails-img-height);
-        display: block;
-}
+
+    .details-container {
+        margin-top: 5vh;
+        margin-right: 5vw;
+    }
+
+
+
+    .details-title {
+        font-size: 1.5em;
+        left: 0;
+        bottom: 2vw;
+    }
+
+    .details-image {
+        width: 45vw;
+        height: 35vw;
+    }
 }
