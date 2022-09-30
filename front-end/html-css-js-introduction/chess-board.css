@@ -54,31 +54,9 @@ html {
     }
 }
 
-.cell-black {
-    width: var(--cell-width);
-    height: var(--cell-height);
-}
-
-.cell-white {
-    width: var(--cell-width);
-    height: var(--cell-height);
-
-}
-
 @media(min-width: 900px) {
     :root {
         --cell-width: 6vw;
         --cell-height: 6vw;
     }
-}
-
-.cell-black {
-    width: var(--cell-width);
-    height: var(--cell-height);
-}
-
-.cell-white {
-    width: var(--cell-width);
-    height: var(--cell-height);
-
 }
