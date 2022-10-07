@@ -28,7 +28,7 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    background-color: rgb(3, 96, 236);
+    /*background-color: rgb(3, 96, 236);*/
     margin: 0;
     background-image: url("../html-css-js-introduction/images/background.jpg");
 
@@ -73,7 +73,7 @@ body {
     display: block;
     font-family: airstream;
     font-style: italic;
-    background-color: rgb(17, 216, 17);
+    background-color: rgb(224, 228, 14);
     position: absolute;
     bottom: 2vw;
     left: 0;
@@ -121,7 +121,7 @@ body {
     display: block;
     text-align: center;
     height: var(--thumbnails-title-height);
-    background-color: rgb(240, 240, 7);
+    background-color: rgb(7, 232, 240);
 }
 
 .thumbnails-anchor {
