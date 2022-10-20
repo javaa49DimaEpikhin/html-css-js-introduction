@@ -2,16 +2,12 @@
     font-family: lakeshore;
     src: url("fonts/LAKESHOR-webfont.svg");
     src: url("fonts/LAKESHOR-webfont.woff");
-
-
 }
 
 @font-face {
     font-family: airstream;
     src: url("fonts/Airstream-webfont.svg");
     src: url("fonts/Airstream-webfont.woff");
-
-
 }
 
 :root {
@@ -50,7 +46,15 @@ body {
     flex-direction: column;
     justify-content: center;
     flex-grow: 1;
+    
 }
+
+.hidden.main-class {
+    --thumbnails-img-width: 35vw;
+    --thumbnails-img-height: 25vw;
+    --thumbnails-title-height: calc(var(--thumbnails-img-height)* 0.33)
+}
+
 
 .details-container {
     display: flex;
@@ -61,6 +65,26 @@ body {
 
 
 }
+
+.hidden .details-container {
+
+    display: none;
+}
+
+.details-frame {
+    position: relative;
+}
+
+.hide-button {
+    position: absolute;
+    top: 2vh;
+    right: 5vh;
+    background-color: rgb(15, 238, 7);
+    font-family: airstream;
+    font-size: 1.5em;
+}
+
+
 
 .details-image {
     width: 90vw;
@@ -99,8 +123,16 @@ body {
     padding-left: 0;
     padding-right: 3vw;
     padding-left: 3vw;
+    font-size: 1em;
 
 }
+
+.hidden .thumbnails-list {
+
+    max-height: 80vh;
+    margin-bottom: 10vh;
+}
+
 
 .thumbnails-item {
     max-width: var(--thumbnails-img-width);
@@ -122,6 +154,10 @@ body {
     text-align: center;
     height: var(--thumbnails-title-height);
     background-color: rgb(7, 232, 240);
+    font-style:oblique;
+    color: rgb(255, 60, 0);
+    
+    
 }
 
 .thumbnails-anchor {
@@ -157,6 +193,7 @@ body {
         max-height: 75vh;
         order: -1;
         justify-content: flex-start;
+        
     }
 
     .main-class {
@@ -177,11 +214,30 @@ body {
 
     }
 
+    .hidden .thumbnails-title {
+
+        font-size: 2.5em;
+    }
+
+    .hidden.main-class {
+        --thumbnails-img-width: 25vw;
+        --thumbnails-img-height: 15vw;
+        --thumbnails-title-height: calc(var(--thumbnails-img-height)* 0.33)
+    }
+    .thumbnails-item {
+
+        font-size: 0.5em;
+    }
+
     .details-title {
         left: 0;
         bottom: 2vw;
 
     }
+    .hide-button {
+        top:1vh;
+        right:4vh;
+
 }
 
 @media(min-width: 900px) {
@@ -212,4 +268,19 @@ body {
         width: 45vw;
         height: 35vw;
     }
+
+    .hidden .thumbnails-title {
+
+        font-size: 3em;
+    }
+    .thumbnails-item {
+
+        font-size: 1em;
+    }
+    .hide-button {
+        right: 11vh;
+
+    }
+
+}
 }
