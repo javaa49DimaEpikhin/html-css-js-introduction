@@ -33,7 +33,7 @@ console.log(`input: ${countrys}, prefix: ${prefix} output: ${deleteWithPrefix(co
 console.log("/****************************task 3*****************************/");
 
 function getSortedEvenOdd(numbers) {
-    numbers.sort((a, b) => a % 2 == b % 2 ? (a - b) * (a % 2 ? -1 : 1) : a % 2 - b % 2);
-    return numbers;
+    return numbers.sort((a, b) => a % 2 == b % 2 ? (a - b) * (a % 2 ? -1 : 1) : a % 2 - b % 2);
+
 }
-console.log(getSortedEvenOdd(ar2));
+console.log(`input: ${ar2},output: ${getSortedEvenOdd(ar2)}`);
