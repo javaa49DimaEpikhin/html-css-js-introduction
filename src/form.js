@@ -15,6 +15,7 @@ function onSubmit(event) {
 function onChange(event) {
     if (event.target.name == "salary") {
         if (+event.target.value < 1000 || +event.target.value > 40000) {
+            event.target.value = '';
             error.innerHTML = "<span style='color: red;'>" + "Please enter salary from 1000 to 40000</span>"
             setTimeout(function () {
                 error.innerHTML = '';
