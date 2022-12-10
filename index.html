@@ -5,46 +5,102 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/form.css">
-    <title>Form</title>
-
+    <title>Library</title>
+    <link rel="stylesheet" href="styles/library.css">
 </head>
 
 <body>
-    <form id="employee-form" onsubmit="onSubmit(event)" class="form-class">
-        <div class="two-inputs">
-            <input type="text" name="employee_name" required placeholder="Enter employee name">
-            <input type="email" name="email" placeholder="Enter email" required>
-        </div>
-        <div class="date-label">
-            <label>Enter birth date</label>
-            <input type="date" name="birthDate" max="2022-01-01" min="1950-01-01" required placeholder="birthdate">
+    <div class="buttons-menu">
+        <button onclick="showSection(0)" class="btn-menu">Add Book</button>
+        <button onclick="showSection(1)" class="btn-menu">Show All Books</button>
+        <button onclick="showSection(2)" class="btn-menu">Show Books by Number of Pages</button>
+        <button onclick="showSection(3)" class="btn-menu">Show Books by Author</button>
+    </div>
+    <section id="add-employee" hidden>
+        <header class="form-title">
+            Book Form
+        </header>
+        <form id="book_form" onsubmit="onSubmitBookForm(event)" class="book-form-class">
+            <div class="two-inputs">
+                <input type="text" name="book_title" required placeholder="Enter book title">
+                <input type="text" name="author" placeholder="Enter author name" required>
+            </div>
+            <div class="date-label">
+                <label>Enter publishing date</label>
+                <input type="date" name="publishingDate" required onchange="onChangeBookForm(event)">
 
-        </div>
-        <div class="two-inputs"><select required name="department">
-                <option value hidden selected disabled>
-                    --Select Department--
-                </option>
-                <option value="QA">QA</option>
-                <option value="Development">Development</option>
-                <option value="Management">Management</option>
-                <option value="Audit">Audit</option>
-            </select>
+            </div>
+            <p id="date_error" class="error"></p>
+            <div class="two-inputs">
+                <select name="genre" required>
+                    <option value hidden selected disabled>
+                        --Select Genre--
+                    </option>
+                    <option value="Literature">Literature</option>
+                    <option value="Fantasy">Fantasy</option>
+                    <option value="Roman">Roman</option>
+                    <option value="History">History</option>
+                </select>
+                <input type="number" name="pages" placeholder="Enter number of pages" required
+                    onchange="onChangeBookForm(event)">
 
-            <input type="number" name="salary" placeholder="Enter salary" onChange="onChange(event)" required>
-            <span id="error"></span>
-        </div>
+            </div>
+            <p id="pages_error" class="error"></p>
+            <div class="buttons">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </section>
 
-        <div class="buttons">
-            <button type="submit">Submit</button>
-            <button type="reset">Reset</button>
+    <section id="show-all-books" hidden>
+        <header class="form-title">
+            The Full List of Books
+        </header>
+        <ul class="books-list" id="books-all">
 
-        </div>
+        </ul>
+    </section>
+    <section id="show-books-pages" hidden>
+        <header class="form-title">
+            Pages Form
+        </header>
+        <form id="pages-form" class="form-class" onsubmit="onSubmitPages(event)">
+            <div class="two-inputs">
+                <input type="number" name="pagesFrom" placeholder="Enter pages 'From'"
+                    onchange="onChangePagesFrom(event)" required>
+                <input type="number" name="pagesTo" placeholder="Enter pages 'To'" onchange="onChangePagesTo(event)"
+                    required>
+            </div>
+            <div class="buttons">
+                <button type="submit">Search</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+        <p id="pages_form_error" class="error center"></p>
+        <ul class="books-list" id="books-pages">
 
+        </ul>
+    </section>
+    <section id="show-books-author" hidden>
+        <header class="form-title">
+            Author Form
+        </header>
+        <form id="author-form" class="author-form-class" onsubmit="onSubmitAuthor(event)">
+            <div class="one-input">
+                <label>Author</label>
+                <input type="text" name="author-name" placeholder="Enter author name" required>
+            </div>
+            <div class="buttons">
+                <button type="submit">Search</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+        <ul class="books-list" id="books-author">
 
-
-    </form>
-    <script src="src/form.js"></script>
+        </ul>
+    </section>
+    <script src="src/main.js" type="module"></script>
 </body>
 
 </html>
