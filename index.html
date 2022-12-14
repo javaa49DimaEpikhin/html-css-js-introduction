@@ -41,8 +41,7 @@
                     <option value="Story">Story</option>
                     <option value="Play">Play</option>
                 </select>
-                <input type="number" name="pages" placeholder="Enter number of pages"
-                                    id="pages_input" required>
+                <input type="number" name="pages" placeholder="Enter number of pages" id="pages_input" required>
 
             </div>
             <p id="pages_error" class="error"></p>
@@ -67,8 +66,10 @@
         </header>
         <form id="pages-form" class="form-class" onsubmit="onSubmitPages(event)">
             <div class="two-inputs">
-                <input type="number" name="pagesFrom" placeholder="Enter pages 'From'" onchange="onChangePagesFrom(event)" required>
-                <input type="number" name="pagesTo" placeholder="Enter pages 'To'" onchange="onChangePagesTo(event)" required>
+                <input type="number" name="pagesFrom" placeholder="Enter pages 'From'"
+                    onchange="onChangePagesFrom(event)" required>
+                <input type="number" name="pagesTo" placeholder="Enter pages 'To'" onchange="onChangePagesTo(event)"
+                    required>
             </div>
             <div class="buttons">
                 <button type="submit">Search</button>

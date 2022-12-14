@@ -91,14 +91,14 @@ body {
     overflow: hidden;
 }
 
-/* V.R. */
+
 .bookss-item-container {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
 
-/* V.R. */
+
 .books-item-paragraph {
     background-color: white;
     font-weight: bold;
