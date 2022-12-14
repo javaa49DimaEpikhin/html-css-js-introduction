@@ -58,7 +58,7 @@ body {
     justify-content: space-around;
     margin-top: 10vh;
     width: 40vw;
-    align-items: center;
+
 }
 
 .error {
@@ -89,6 +89,19 @@ body {
     border: 2px solid blue;
     margin-top: 10vh;
     overflow: hidden;
+}
+
+/* V.R. */
+.bookss-item-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/* V.R. */
+.books-item-paragraph {
+    background-color: white;
+    font-weight: bold;
 }
 
 .buttons-menu {

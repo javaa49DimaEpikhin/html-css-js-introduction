@@ -16,18 +16,18 @@
         <button onclick="showSection(2)" class="btn-menu">Show Books by Number of Pages</button>
         <button onclick="showSection(3)" class="btn-menu">Show Books by Author</button>
     </div>
-    <section id="add-employee" hidden>
+    <section id="add-book" hidden>
         <header class="form-title">
             Book Form
         </header>
-        <form id="book_form" onsubmit="onSubmitBookForm(event)" class="book-form-class">
+        <form id="book_form" class="book-form-class">
             <div class="two-inputs">
                 <input type="text" name="book_title" required placeholder="Enter book title">
                 <input type="text" name="author" placeholder="Enter author name" required>
             </div>
             <div class="date-label">
                 <label>Enter publishing date</label>
-                <input type="date" name="publishingDate" required onchange="onChangeBookForm(event)">
+                <input type="date" name="publishingDate" required id="date_input">
 
             </div>
             <p id="date_error" class="error"></p>
@@ -36,13 +36,13 @@
                     <option value hidden selected disabled>
                         --Select Genre--
                     </option>
-                    <option value="Literature">Literature</option>
-                    <option value="Fantasy">Fantasy</option>
-                    <option value="Roman">Roman</option>
-                    <option value="History">History</option>
+                    <option value="Epic">Epic</option>
+                    <option value="Essay">Essay</option>
+                    <option value="Story">Story</option>
+                    <option value="Play">Play</option>
                 </select>
-                <input type="number" name="pages" placeholder="Enter number of pages" required
-                    onchange="onChangeBookForm(event)">
+                <input type="number" name="pages" placeholder="Enter number of pages"
+                                    id="pages_input" required>
 
             </div>
             <p id="pages_error" class="error"></p>
@@ -67,10 +67,8 @@
         </header>
         <form id="pages-form" class="form-class" onsubmit="onSubmitPages(event)">
             <div class="two-inputs">
-                <input type="number" name="pagesFrom" placeholder="Enter pages 'From'"
-                    onchange="onChangePagesFrom(event)" required>
-                <input type="number" name="pagesTo" placeholder="Enter pages 'To'" onchange="onChangePagesTo(event)"
-                    required>
+                <input type="number" name="pagesFrom" placeholder="Enter pages 'From'" onchange="onChangePagesFrom(event)" required>
+                <input type="number" name="pagesTo" placeholder="Enter pages 'To'" onchange="onChangePagesTo(event)" required>
             </div>
             <div class="buttons">
                 <button type="submit">Search</button>
