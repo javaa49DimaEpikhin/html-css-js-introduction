@@ -44,7 +44,7 @@ export class BookForm {
         this.#pageInputElement.addEventListener("change", (event) => {
             this.validatePages(event.target);
         })
-       
+
     }
     validatePages(element) {
         const value = +element.value;
@@ -56,13 +56,13 @@ export class BookForm {
     }
     validatePublishingDate(element) {
         const selectedDate = new Date(element.value);
-        if(selectedDate < this.#minDate || selectedDate > this.#maxDate) {
-            const message = selectedDate < this.#minDate ? `date must be ${this.#minDate} or greater`:
-               `date must be ${this.#maxDate} or less`;
-            showErrorMessage(element, message, this.#dateErrorElement) ;    
+        if (selectedDate < this.#minDate || selectedDate > this.#maxDate) {
+            const message = selectedDate < this.#minDate ? `date must be ${this.#minDate} or greater` :
+                `date must be ${this.#maxDate} or less`;
+            showErrorMessage(element, message, this.#dateErrorElement);
         }
     }
-        
+
     getMaxDate() {
         return new Date();
     }
